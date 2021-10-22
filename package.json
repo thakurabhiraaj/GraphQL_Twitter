@@ -8,8 +8,8 @@
     "npm": "7.24.0"
   },
   "scripts": {
-    "build:web": "cd web && yarn install && yarn run build",
-    "build:server": "cd server && yarn install && yarn run build",
-    "heroku-postbuild": "build:web && build:server"
+    "build:web": "yarn --cwd ./web install && yarn --cwd ./web run build",
+    "build:server": "yarn --cwd ./server install && yarn --cwd ./server run build",
+    "heroku-postbuild": "yarn run build:web && yarn run build:server"
   }
 }
