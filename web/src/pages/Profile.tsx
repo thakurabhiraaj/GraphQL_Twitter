@@ -1,5 +1,4 @@
 import { gql, useQuery } from "@apollo/client"
-import React from "react"
 import { Link, useHistory } from "react-router-dom"
 import CreateProfile from "../components/CreateProfile"
 import Following from "../components/Following"

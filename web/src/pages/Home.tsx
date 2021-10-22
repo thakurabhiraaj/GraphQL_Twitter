@@ -1,6 +1,4 @@
 import { gql, useQuery } from "@apollo/client"
-import React from "react"
-import { useHistory } from "react-router-dom"
 import AllTweets from "../components/AllTweets"
 import HomPageTweet from "../components/HomePageTweet"
 import LeftNav from "../components/LeftNav"
@@ -25,8 +23,7 @@ export const ME_QUERY = gql`
 `
 
 function Home() {
-  const history = useHistory()
-  const { loading, error, data } = useQuery(ME_QUERY)
+  const { loading, error } = useQuery(ME_QUERY)
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>{error.message}</p>

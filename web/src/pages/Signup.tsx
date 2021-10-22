@@ -1,6 +1,5 @@
 import { gql, useMutation } from "@apollo/client"
 import { ErrorMessage, Field, Form, Formik } from "formik"
-import React from "react"
 import { Link, useHistory } from "react-router-dom"
 import * as Yup from "yup"
 import TwitterLogo from "../styles/assets/twitter-logo.png"
@@ -23,7 +22,7 @@ interface SignupValues {
 
 function Signup() {
 	const history = useHistory()
-	const [ signup, { data } ] = useMutation(SIGNUP_MUTATION)
+	const [ signup ] = useMutation(SIGNUP_MUTATION)
 
 	const initialValues: SignupValues = {
 		email: "",
@@ -53,7 +52,7 @@ function Signup() {
 					})
 					localStorage.setItem("token", response.data.signup.token)
 					setSubmitting(false)
-					history.push("/")
+					history.push("/home")
 				}}
 			>
 				<Form>

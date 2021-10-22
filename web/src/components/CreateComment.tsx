@@ -62,7 +62,7 @@ export default function CreateComment({ tweet, avatar, name, id }: Props) {
 				<i className="far fa-comment" aria-hidden="true" />
 			</span>
 
-			<Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Modal" style={customStyles}>
+			<Modal isOpen={modalIsOpen} onRequestClose={closeModal} ariaHideApp={false} contentLabel="Modal" style={customStyles}>
 				<span className="exit" onClick={closeModal}>
 					<i className="fa fa-times" aria-hidden="true" />
 				</span>
