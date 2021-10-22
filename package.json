@@ -1,0 +1,14 @@
+{
+  "name": "graphql-twitter",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "build:web": "cd web && yarn install && yarn run build",
+    "build:server": "cd server && yarn install && yarn run build",
+    "heroku-postbuild": "build:web && build:server"
+  }
+}
