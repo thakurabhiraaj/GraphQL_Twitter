@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-modal": "^3.13.1",
     "@types/react-router-dom": "^5.1.6",
+    "@types/yup": "^0.29.13",
     "apollo-link-context": "^1.0.20",
     "date-fns": "^2.16.1",
     "formik": "^2.2.5",
@@ -50,7 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/yup": "^0.29.9"
-  }
+  "devDependencies": {}
 }
