@@ -4,13 +4,12 @@
   "scripts": {
     "start": "node dist/server",
     "clean": "rm -rf dist",
-    "build": "yarn run clean && yarn run generate && yarn run tsc",
+    "build": "yarn run clean && yarn run generate",
     "generate": "yarn run generate:prisma && npm run generate:nexus",
     "generate:prisma": "yarn run prisma generate",
     "generate:nexus": " yarn run ts-node-transpile-only --files src/schema",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly src/server",
-    "migrate": "npx prisma migrate up --experimental",
-    "tsc": "tsc"
+    "migrate": "npx prisma migrate up --experimental"
   },
   "dependencies": {
     "@nexus/schema": "0.17.0",
