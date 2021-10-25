@@ -11,9 +11,8 @@ const server = new graphql_yoga_1.GraphQLServer({
     context: context_1.createContext,
     middlewares: [permissions_1.permissions],
 });
-const buildPath = path.normalize(path.join(__dirname, '../../web/build'));
 server.express.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/../../web/build/index.html'));
+    res.sendFile(path.join(__dirname + '/../../web/build/public/index.html'));
 });
 server.start({ port: port }, () => console.log(`Server is running on localhost:${port}`));
 // // Serve static files from the React frontend app
