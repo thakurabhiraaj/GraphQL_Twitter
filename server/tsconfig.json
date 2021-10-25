@@ -1,7 +1,7 @@
 {
-  // "ts-node": {
-  //   "files": true
-  // },
+  "ts-node": {
+    "files": true
+  },
   "compilerOptions": {
     "sourceMap": true,
     "module": "commonjs",
