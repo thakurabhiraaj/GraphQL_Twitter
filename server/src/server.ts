@@ -15,8 +15,7 @@ const server = new GraphQLServer({
 
 const buildPath = path.normalize(path.join(__dirname, '../../web/build'));
 
-server.express.use('/uploads', express.static(path.join(buildPath)));
-server.express.get('/build', (req, res) => {
+server.express.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/../../web/build/index.html'))
 })
 server.start({port: port}, () => console.log(`Server is running on localhost:${port}`))
