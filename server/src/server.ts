@@ -19,7 +19,7 @@ server.express.use('/uploads', express.static(path.join(buildPath)));
 server.express.get('/build', (req, res) => {
   res.sendFile(path.join(__dirname + '/../../web/build/index.html'))
 })
-server.start({port}, () => console.log(`Server is running on localhost:${port}`))
+server.start({port: port}, () => console.log(`Server is running on localhost:${port}`))
 // // Serve static files from the React frontend app
 // app.use(express.static(path.join(__dirname, '../frontend/build')))
 

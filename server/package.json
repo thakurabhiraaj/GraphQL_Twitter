@@ -3,7 +3,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/server",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && tsc",
     "build": "yarn run clean && yarn run generate",
     "generate": "yarn run generate:prisma && npm run generate:nexus",
     "generate:prisma": "yarn run prisma generate",
