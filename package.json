@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:web": "yarn --cwd ./web install && yarn --cwd ./web run build",
-    "build:server": "yarn --cwd ./server install && yarn --cwd ./server run build",
+    "build:server": "yarn --cwd ./server install && yarn --cwd ./server run generate:prisma",
     "heroku-postbuild": "yarn run build:web && yarn run build:server"
   }
 }
