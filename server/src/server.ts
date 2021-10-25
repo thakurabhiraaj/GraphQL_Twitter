@@ -12,7 +12,7 @@ const server = new GraphQLServer({
   context: createContext,
   middlewares: [permissions],
 })
-
+server.express.use(express.static(path.join(__dirname, '/../../web/build')))
 server.express.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/../../web/build/index.html'))
 })
