@@ -17,8 +17,8 @@ import Signup from "./pages/Signup";
 import SingleTweet from "./pages/SingleTweet";
 import SingleUser from "./pages/SingleUser";
 
-const port = process.env.PORT||4000;
-const httpLink = new HttpLink({ uri: `http://localhost:${port}`});
+const port = process.env.PORT || 4000;
+const httpLink = new HttpLink({ uri: `https://gql-twitter.herokuapp.com/`});
 const authLink = setContext(async (req, { headers }) => {
   const token = localStorage.getItem("token");
 

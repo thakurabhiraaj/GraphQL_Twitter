@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:web": "yarn --cwd ./web install && yarn --cwd ./web run build",
-    "build:server": "yarn --cwd ./server install && yarn --cwd ./server run build",
+    "build:server": "yarn --cwd ./server install && yarn --cwd ./server run build && yarn --cwd ./server migrate",
     "heroku-postbuild": "yarn run build:web && yarn run build:server",
     "deploy": "yarn --cwd ./server run clean && git add . && git commit -m heroku && git push"
   }
