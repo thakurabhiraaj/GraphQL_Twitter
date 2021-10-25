@@ -9,7 +9,8 @@
     "generate:prisma": "yarn run prisma generate",
     "generate:nexus": " yarn run ts-node-transpile-only --files src/schema",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly src/server",
-    "migrate": "npx prisma migrate up --experimental"
+    "migrate": "npx prisma migrate up --experimental",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@nexus/schema": "0.17.0",
